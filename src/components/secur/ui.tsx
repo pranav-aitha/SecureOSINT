@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
 import { formatBytes, IOC_LABELS, type IocType } from "@/lib/detect";
 import type { VtReport, DnsRecord } from "@/lib/vt.server";
@@ -6,11 +7,12 @@ import type { VtReport, DnsRecord } from "@/lib/vt.server";
 /* ---------------- Logo ---------------- */
 
 export function Logo({ compact = false }: { compact?: boolean }) {
+  const base = import.meta.env.BASE_URL || "/";
   return (
     <div className="flex items-center gap-3 select-none">
       <div className="relative flex items-center justify-center">
         <img
-          src="/logo.png"
+          src={`${base}logo.png`}
           alt="SecurOSINT Logo"
           className="h-9 w-9 object-contain drop-shadow-[0_0_12px_rgba(6,182,212,0.65)]"
         />
@@ -31,9 +33,9 @@ export function ConsoleHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-white/8 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <a href="/" className="transition-opacity hover:opacity-80">
+        <Link to="/" className="transition-opacity hover:opacity-80">
           <Logo />
-        </a>
+        </Link>
         <div className="flex items-center gap-3">
           <span className="hidden sm:inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-success animate-pulse-glow" />

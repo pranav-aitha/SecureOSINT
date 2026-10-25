@@ -43,3 +43,4 @@ dist-ssr
 node_modules/
 dist/
 .vercel/
+gh-pages-dist/

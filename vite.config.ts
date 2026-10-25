@@ -5,11 +5,12 @@ import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { nitro } from "nitro/vite";
 
+const isGitHubPages = process.env.GITHUB_PAGES === "true";
+
 export default defineConfig({
+  base: isGitHubPages ? "/SecureOSINT/" : "/",
   plugins: [
     tanstackStart({
-      // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-      // nitro/vite builds from this
       server: { entry: "server" },
     }),
     nitro({
