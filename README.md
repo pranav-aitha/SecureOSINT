@@ -11,7 +11,7 @@ Made with ❤️ by **Pranav Aitha**.
 
 ## 🌐 Live Access
 You can access and use the platform instantly via your web browser:
-🔗 **[Live Console: secureosint-main.vercel.app](https://vercel.app)**
+🔗 **[Live Console: ](secureosint-main.vercel.app)**
 
 ---
 
