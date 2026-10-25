@@ -1,0 +1,276 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * SecurOSINT design system — dark metallic / gunmetal / tactical.
+ * Single dark theme. All colors oklch.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --animate-scan-sweep: scan-sweep 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-spin-slow: spin 8s linear infinite;
+}
+
+@theme {
+  --animate-marquee: marquee 26s linear infinite;
+}
+
+:root {
+  --radius: 0.5rem;
+
+  --background: oklch(0.148 0.014 262);
+  --foreground: oklch(0.93 0.008 250);
+  --card: oklch(0.19 0.014 262);
+  --card-foreground: oklch(0.93 0.008 250);
+  --popover: oklch(0.185 0.014 262);
+  --popover-foreground: oklch(0.93 0.008 250);
+  --primary: oklch(0.84 0.135 195);
+  --primary-foreground: oklch(0.16 0.02 262);
+  --secondary: oklch(0.24 0.016 262);
+  --secondary-foreground: oklch(0.88 0.01 250);
+  --muted: oklch(0.23 0.014 262);
+  --muted-foreground: oklch(0.62 0.018 255);
+  --accent: oklch(0.30 0.03 200);
+  --accent-foreground: oklch(0.90 0.01 250);
+  --destructive: oklch(0.63 0.24 27);
+  --destructive-foreground: oklch(0.98 0.005 250);
+  --success: oklch(0.78 0.17 160);
+  --warning: oklch(0.83 0.15 85);
+  --border: oklch(1 0 0 / 9%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.84 0.135 195 / 55%);
+
+  --metal-hi: oklch(1 0 0 / 11%);
+  --metal-lo: oklch(0 0 0 / 35%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scrollbar-color: oklch(0.35 0.02 262) oklch(0.16 0.012 262);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-display);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: oklch(0.84 0.135 195 / 30%);
+  }
+}
+
+/* ---------- Metallic surfaces ---------- */
+
+@utility panel-metal {
+  background:
+    linear-gradient(
+      158deg,
+      oklch(0.235 0.016 262) 0%,
+      oklch(0.185 0.013 262) 48%,
+      oklch(0.20 0.014 262) 100%
+    );
+  border: 1px solid oklch(1 0 0 / 8%);
+  box-shadow:
+    inset 0 1px 0 var(--metal-hi),
+    inset 0 -1px 0 var(--metal-lo),
+    0 14px 40px -18px oklch(0 0 0 / 60%);
+}
+
+@utility panel-inset {
+  background: linear-gradient(180deg, oklch(0.145 0.012 262), oklch(0.165 0.012 262));
+  border: 1px solid oklch(0 0 0 / 35%);
+  box-shadow:
+    inset 0 2px 6px oklch(0 0 0 / 45%),
+    inset 0 -1px 0 var(--metal-hi);
+}
+
+@utility button-metal {
+  background: linear-gradient(180deg, oklch(0.30 0.018 260) 0%, oklch(0.20 0.014 260) 55%, oklch(0.24 0.015 260) 100%);
+  border: 1px solid oklch(1 0 0 / 10%);
+  box-shadow:
+    inset 0 1px 0 var(--metal-hi),
+    inset 0 -2px 4px oklch(0 0 0 / 30%),
+    0 6px 18px -8px oklch(0 0 0 / 60%);
+  transition: all 0.18s ease;
+
+  &:hover {
+    background: linear-gradient(180deg, oklch(0.36 0.024 195) 0%, oklch(0.24 0.016 195) 55%, oklch(0.28 0.018 195) 100%);
+    border-color: oklch(0.84 0.135 195 / 35%);
+    box-shadow:
+      inset 0 1px 0 var(--metal-hi),
+      0 0 24px -4px oklch(0.84 0.135 195 / 30%);
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: inset 0 2px 6px oklch(0 0 0 / 40%);
+  }
+}
+
+@utility button-cta {
+  background: linear-gradient(180deg, oklch(0.88 0.13 195) 0%, oklch(0.72 0.14 200) 100%);
+  color: oklch(0.16 0.02 262);
+  border: 1px solid oklch(1 0 0 / 25%);
+  box-shadow:
+    inset 0 1px 0 oklch(1 0 0 / 45%),
+    0 8px 28px -8px oklch(0.84 0.135 195 / 45%);
+  transition: all 0.18s ease;
+
+  &:hover {
+    box-shadow:
+      inset 0 1px 0 oklch(1 0 0 / 45%),
+      0 0 36px -6px oklch(0.84 0.135 195 / 55%);
+    filter: brightness(1.06);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+@utility text-metal {
+  background: linear-gradient(178deg, oklch(0.97 0.005 250) 12%, oklch(0.74 0.02 250) 55%, oklch(0.55 0.02 255) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility text-cyan-glow {
+  color: oklch(0.84 0.135 195);
+  text-shadow: 0 0 18px oklch(0.84 0.135 195 / 45%);
+}
+
+@utility texture-brush {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-image: repeating-linear-gradient(
+      104deg,
+      oklch(1 0 0 / 1.6%) 0px,
+      oklch(1 0 0 / 1.6%) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  }
+}
+
+@utility bg-grid-tactical {
+  background-image:
+    linear-gradient(oklch(1 0 0 / 2.6%) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 2.6%) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+@utility label-tactical {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--color-muted-foreground);
+}
+
+/* ---------- Keyframes ---------- */
+
+@keyframes scan-sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(240%);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes cyber-blink {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 12px rgba(6, 182, 212, 0.9);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.9);
+    box-shadow: 0 0 2px rgba(6, 182, 212, 0.2);
+  }
+}
+
+@utility animate-cyber-blink {
+  animation: cyber-blink 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

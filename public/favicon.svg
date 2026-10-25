@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="shieldBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#141c26"/>
+      <stop offset="100%" stop-color="#0a0e14"/>
+    </linearGradient>
+    <linearGradient id="cyberBorder" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="cyanCore" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Outer Tactical Hex Shield -->
+  <path d="M24 3 L43 13.5 V34.5 L24 45 L5 34.5 V13.5 Z" fill="url(#shieldBg)" stroke="url(#cyberBorder)" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Inner Circuit Grid Accent -->
+  <path d="M24 8 L38 16 V32 L24 40 L10 32 V16 Z" fill="none" stroke="#0284c7" stroke-width="1" opacity="0.4" stroke-dasharray="2 3"/>
+  <!-- Central Target Crosshairs & Radar Reticle -->
+  <circle cx="24" cy="24" r="8" stroke="url(#cyanCore)" stroke-width="2" fill="#082f49" fill-opacity="0.6"/>
+  <circle cx="24" cy="24" r="3" fill="url(#cyanCore)" filter="url(#glow)"/>
+  <!-- Tactical Reticle Axis Lines -->
+  <path d="M24 10 V14 M24 34 V38 M10 24 H14 M34 24 H38" stroke="url(#cyanCore)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Mini Corner Sensor Accents -->
+  <circle cx="24" cy="4" r="1.5" fill="#38bdf8"/>
+  <circle cx="43" cy="13.5" r="1.5" fill="#38bdf8"/>
+  <circle cx="5" cy="13.5" r="1.5" fill="#38bdf8"/>
+</svg>
