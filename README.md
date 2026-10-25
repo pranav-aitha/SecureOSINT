@@ -1,77 +1,108 @@
-# 🛡️ SecurOSINT — Threat Intelligence Console
 
-SYS_GRID // 0x7F2A.LIVE  |  FEED // ENCRYPTED_TLS_v1.3  |  NODE: AS701_INTEL_DEFENSE  |  STATUS: ACTIVE_SURVEILLANCE
+<div align="center">
 
+# 🛡️ SecureOSINT
 
-**SecurOSINT** is a professional, high-performance open-source threat intelligence console designed to scan everything and trust nothing. It aggregates infrastructure reconnaissance, cryptographic hash verification, and multi-vendor threat analysis into a single, unified web workspace.
+### *Next-Generation Threat Intelligence & Reconnaissance Platform*
 
-Made with ❤️ by **Pranav Aitha**.
+[![Status](https://img.shields.io/badge/Status-Live%20%26%20Operational-success?style=for-the-badge&logo=vercel)](https://secureosint-main.vercel.app)
+[![Author](https://img.shields.io/badge/Made%20with-💙%20by%20Pranav-blue?style=for-the-badge&logo=github)](https://github.com/pranav-aitha)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
----
-
-## 🌐 Live Access
-You can access and use the platform instantly via your web browser:
-🔗 **[Live Console: ](secureosint-main.vercel.app)**
+*Unifying deep reconnaissance, file forensics, and digital footprint analysis into a single, lightning-fast web interface.*
 
 ---
 
-## ⚡ Core Engine Features
+### 🌐 Access Live Platforms
 
-### 📁 1. File Scanning & Hash Verification
-* **In-Browser SHA-256 Computation:** Instantly computes cryptographic checksums locally before checking threat feeds, keeping your sensitive data private.
-* **Multi-Vendor Intelligence:** Seamlessly queries live verdicts across 70+ security vendors via integrated intelligence networks.
-* **Universal File Support:** Built to process complex formats including:
-  * Windows executables and system files (`PE`, `EXE`, `DLL`)
-  * Business documents (`PDF`, `Office Docs`)
-  * Compressed structures (`ZIP`, `7Z`, `TAR`)
-  * Development assets (`Scripts & Binaries`)
-
-### 🔗 2. URL & IP Scanning
-* **Phishing & Malware Analysis:** Inspects suspicious web traffic and malicious payloads with safe, final redirect resolution.
-* **Domain & Network Reconnaissance:** Pulls registrar histories, active DNS tracking records, domain categorization flags, and vendor reputation indexes.
-* **IP Intelligence:** Exposes target Autonomous System Numbers (`ASN`), geolocation maps, network ranges, and registered abuse signals.
+[🚀 **Primary Web App (Vercel)**](https://secureosint-main.vercel.app) • [⚡ **Secondary Mirror (GitHub Pages)**](https://pranav-aitha.github.io/SecureOSINT/) • [💬 **Connect on Instagram**](https://www.instagram.com/pranav_aitha/)
 
 ---
 
-## ❓ Why Choose SecurOSINT?
+</div>
 
-* **Zero Installation:** Run comprehensive cyber forensics straight through the browser link without setting up local software.
-* **Static File Protection:** Analyzes files without blindly pushing full data objects onto third-party systems.
-* **Unified Security Feeds:** Consolidates decentralized reputation databases (like VirusTotal intelligence data) into a clean, actionable UI grid.
-* **Enterprise Look & Feel:** Built with a dark, high-visibility command center interface designed for Security Operations Center (SOC) engineers and analysts.
+## 🌟 Why SecureOSINT?
 
----
+In today's complex cyber landscape, security professionals, developers, and researchers need instant, unified reconnaissance tools without juggling multiple disjointed command-line scripts or heavy enterprise dashboards.
 
-## 🛠️ How To Use It
-
-### Option A: Web Link Access (Fastest)
-1. Navigate to [secureosint-main.vercel.app](https://vercel.app).
-2. Choose your input engine from the tab menu: **Upload File**, **Scan URL**, **IP / Hash**, or **Search**.
-3. View your live multi-vendor engine threat verdicts immediately.
-
-### Option B: Local Repository Setup
-If you have cloned this repository onto your machine via **Antigravity**, deploy or test it locally using:
-
-1. Open your terminal in the directory:
-   ```bash
-   npm install
-   ```
-2. Start the local server environment:
-   ```bash
-   npm run dev
-   ```
-3. Open your browser to the designated `localhost` port to test your scans.
+**SecureOSINT** bridges that gap—acting as an all-in-one security intelligence hub designed to ingest suspicious IPs, URLs, raw file hashes, or physical payloads and distill them into actionable, high-precision threat insights in real time.
 
 ---
 
-## 📝 Project Identity & Socials
-* **Author:** Pranav Aitha
-* **Deployment Engine:** Vercel Environment
-* **Design Philosophy:** Minimalist, data-dense threat tracking
+## 💎 Core Feature Arsenal
 
-### Connect with the Developer
-[![Instagram](https://shields.io)](https://www.instagram.com/pranav_aitha/)
-[![GitHub](https://shields.io)](https://github.com)
+
+```
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│                            SecureOSINT Engine                             │
+├─────────────────────┬─────────────────────────────────────────────────────┤
+│ 📁 File Scanning    │ Deep static analysis & heuristic anomaly detection   │
+├─────────────────────┼─────────────────────────────────────────────────────┤
+│ 🌐 IP Intelligence  │ Geolocation, ISP, ASN tracking, & historical abuse  │
+├─────────────────────┼─────────────────────────────────────────────────────┤
+│ 🔗 URL Reputation   │ Phishing detection, SSL checks, & redirect paths   │
+├─────────────────────┼─────────────────────────────────────────────────────┤
+│ 🔍 Hash Forensics   │ Instant MD5/SHA-1/SHA-256 correlation against feeds │
+└─────────────────────┴─────────────────────────────────────────────────────┘
+
+```
+
+* **📁 Multi-Vector File Scanning:** Inspect structural anomalies, file signatures, and embedded metadata instantly.
+* **🌐 IP Geolocation & Abuse History:** Trace the true origin, ASN, hosting provider, and reputation score of any IP worldwide.
+* **🔗 Deep URL & Domain Recon:** Dissect suspicious hyperlinks before clicking; audit redirect chains, SSL security, and blacklist flags.
+* **🔍 Instant Cryptographic Hash Lookup:** Query file hashes in milliseconds across global threat intelligence databases.
 
 ---
-*Disclaimer: SecurOSINT is built for digital reconnaissance, standard web safety validation, and threat intelligence analysis. Always handle verified live malware samples within isolated sandbox environments.*
+
+## ⚡ Live Access & Mirrors
+
+Access the platform directly using any of our deployed environments:
+
+* **Primary Portal:** Launch via [Primary Web App](https://secureosint-main.vercel.app)
+* **Secondary Mirror:** Launch via [GitHub Pages Mirror](https://pranav-aitha.github.io/SecureOSINT/)
+
+---
+
+## ⚙️ How to Run Locally
+
+For developers who want to spin up a local instance for custom integrations:
+
+```bash
+# 1. Clone the repository
+git clone [https://github.com/pranav-aitha/SecureOSINT.git](https://github.com/pranav-aitha/SecureOSINT.git)
+
+# 2. Navigate to the project directory
+cd SecureOSINT
+
+# 3. Install required dependencies
+npm install
+
+# 4. Spin up the development server
+npm run dev
+
+```
+
+---
+
+## 🛠️ Built With Modern Tech
+
+* **Frontend Engine:** Responsive UI engineered for instant feedback and clean visual telemetry.
+* **Cloud Infrastructure:** Edge-optimized deployments via [Vercel](https://www.google.com/url?sa=E&source=gmail&q=https://secureosint-main.vercel.app) and [GitHub Pages](https://pranav-aitha.github.io/SecureOSINT/).
+* **Threat Feeds:** High-throughput OSINT API integration for real-time security data correlation.
+
+---
+
+## 👨‍💻 Developer & Creator
+
+SecureOSINT was conceptualized, engineered, and crafted with precision by **Pranav Aitha**.
+
+* **Instagram Profile:** [Connect with Pranav](https://www.instagram.com/pranav_aitha/)
+* **Live Studio:** [Access Vercel Platform](https://www.google.com/url?sa=E&source=gmail&q=https://secureosint-main.vercel.app)
+* **Secondary Portal:** [Access GitHub Pages Site](https://pranav-aitha.github.io/SecureOSINT/)
+
+---
+
+### Made with 💙 by Pranav Aitha
+
+*If SecureOSINT simplified your threat analysis workflow, please consider dropping a ⭐ on the repository!*
