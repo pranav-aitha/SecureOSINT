@@ -5,7 +5,7 @@ SYS_GRID // 0x7F2A.LIVE  |  FEED // ENCRYPTED_TLS_v1.3  |  NODE: AS701_INTEL_DEF
 
 **SecurOSINT** is a professional, high-performance open-source threat intelligence console designed to scan everything and trust nothing. It aggregates infrastructure reconnaissance, cryptographic hash verification, and multi-vendor threat analysis into a single, unified web workspace.
 
-Engineered with ❤️ by **Pranav Aitha**.
+Made with ❤️ by **Pranav Aitha**.
 
 ---
 
